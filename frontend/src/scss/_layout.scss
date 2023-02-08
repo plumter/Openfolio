@@ -1,0 +1,224 @@
+
+// No Authenticated Layout
+.auth {
+    @apply w-full xl:w-7/12 bg-white px-7 sm:px-11 my-auto flex justify-center  text-sm dark:bg-black-1; min-height: calc(100vh);
+
+    > div {
+        @apply my-auto pb-20 pt-10; width: 27rem;
+    }
+}
+
+// Authenticated Layout
+
+.cont {
+    @apply flex w-full h-full relative text-sm;
+
+    > .placeholder {
+        @apply flex-none w-0 xl:w-80;
+    }
+
+    > aside {
+        @apply fixed bottom-0 -left-80 xl:left-0  top-0 w-80 bg-white border-r z-80 dark:bg-dark-1 dark:border-dark; transition: left 0.5s;
+
+        @screen xl {
+            transition: none;
+        }
+
+        &.show {
+            @apply left-0;
+        }
+
+        .navlink-cont {
+            @apply py-3;
+
+            li{
+                @apply py-1;
+
+                > a, > button {
+                    @apply inline-block w-full px-5 text-grey-2 text-sm py-3 rounded-md relative;
+
+                    svg {
+                        @apply inline-block stroke-current mr-3 h-5 w-5; 
+
+                        &.fill {
+                            @apply fill-current; stroke: inherit;
+                        }
+                    }
+
+                    svg.swap-svg:nth-child(2) {
+                        @apply hidden;
+                    }
+
+                    &:hover:not(.no-link), &.active {
+                        @apply text-primary bg-primary-light dark:bg-dark-3;
+
+                        svg {
+                            @apply fill-current; stroke: inherit;
+
+                            &.no-fill {
+                                @apply stroke-current; fill: none;
+                                
+                            }
+                        }
+
+                        svg.swap-svg:first-child {
+                            @apply hidden;
+                        }
+
+                        svg.swap-svg:nth-child(2) {
+                            @apply inline-block;
+                        }
+                    }
+
+                    svg.right-svg {
+                        @apply inline-block fill-current float-right h-5 w-5 mr-0; 
+                    }
+                }
+
+            }
+        }
+
+        .scrollable-nav {
+            @apply overflow-y-auto flex flex-col bottom-[3.2rem] absolute top-14 ;
+        }
+        .lower-nav {
+            @apply absolute bottom-0 py-4 bg-white dark:bg-dark-1 dark:text-white border-r dark:border-dark;
+        }
+
+        .parent-nav {
+            @apply w-16  border-r dark:border-dark;
+
+            ul:not(.user-menu) {
+                @apply pb-2;
+            
+                li {
+                    @apply text-center py-1.5;
+
+                    > a, > button,  > div {
+                        @apply mx-auto px-3 w-min;
+
+                        svg {
+                            @apply m-0;
+                        }
+                        > span {
+                            @apply inline-block h-5 px-2 text-center text-white text-[0.6rem] rounded-full absolute right-0.5 bottom-6;
+                        }
+                    }
+                }
+
+                
+            }
+
+            .scrollable-nav, .lower-nav {
+                @apply w-16 left-0 ;
+            }
+        }
+
+        .child-nav {
+            
+            > h1 {
+                @apply p-5 pt-6 flex relative z-70 font-medium bg-white dark:bg-dark-1 dark:text-white;
+            }
+
+            ul {
+            
+                li {
+                    @apply py-0.5;
+                    
+                    > a, > button {
+                        &.active.collapse {
+                            @apply bg-white dark:bg-dark-1;
+                        }
+                        svg {
+                            @apply w-4;
+                        }
+
+                        > span {
+                            @apply float-right inline-block h-5 w-5 text-center text-white text-xxxs rounded-full;
+                        }
+                    }
+
+                    ul li > a {
+                        @apply pl-12 py-2.5;
+                    }
+                }
+            }
+
+            .scrollable-nav, .lower-nav {
+                @apply left-16 right-0 px-2 ;
+            }
+
+            .scrollable-nav {
+                @apply bottom-0;
+            }
+
+            
+        }
+    }
+
+    .no-sub-nav.placeholder {
+        @apply w-0 xl:w-16;
+    }
+
+    aside.no-sub-nav {
+        @apply -left-16 xl:left-0 w-16 ;
+        &.show {
+            @apply left-0;
+        }
+        .child-nav {
+            @apply hidden;
+        }
+    }
+
+    > main {
+        @apply flex-1 ;
+
+        > .main-cont {
+            @apply p-3 lg:p-6;
+
+            .sticky-1 {
+                @apply flex bg-white -mx-3 lg:-mx-6 -mt-6 py-3 text-sm px-5 sticky top-14 lg:top-0 border-b space-x-4 flex-wrap h-[4.1rem] leading-8 dark:bg-dark-1 dark:border-dark dark:text-white z-40;
+                &.slim {
+                    @apply py-0; height: 2.5rem;
+                }
+            }
+
+            .sticky-2 {
+                @apply  flex bg-white -mx-3 lg:-mx-6 sticky top-[7.6rem] lg:top-[4.1rem] px-5 flex-wrap dark:bg-dark-1 z-40 border-b dark:border-dark;
+
+                &.warn {
+                    @apply bg-warn dark:bg-warn;
+                }
+
+                &.slim-sub {
+                    top: 6.0rem;           
+                    @screen lg {
+                        top: 2.5rem;
+                    }
+                }
+            }
+
+            .sticky-3 {
+                @apply  flex bg-white -mx-3 lg:-mx-6 sticky top-[11.2rem] lg:top-[7.7rem] px-5 flex-wrap dark:bg-dark-1 z-40 border-b dark:border-dark;
+
+                &.warn {
+                    @apply bg-warn dark:bg-warn;
+                }
+                &.slim-sub {
+                    top: 9.6rem;           
+                    @screen lg {
+                        top: 6.1rem;
+                    }
+                }
+            }
+
+            .cont-area {
+                min-height: calc(100vh - 7.5rem);
+
+                &.no-nav{
+                    min-height: calc(100vh - 3rem);
+                }
+            }
+        }
+    }
+}

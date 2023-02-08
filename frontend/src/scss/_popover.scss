@@ -1,0 +1,32 @@
+
+    .popover{
+        @apply p-0 shadow-lg text-base z-60 w-72 sm:w-96 float-left py-1 list-none text-left border rounded-xl bg-white dark:bg-dark dark:border-dark-1 dark:text-white;
+        
+        .opt-cont {
+            @apply  overflow-auto;  max-height: 10rem;
+
+        }
+
+        &.tool-tip{
+            filter: drop-shadow(0px 0px 10px #f5f3f3);
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-width: 15px;
+                border-style: solid;
+                top: -30px;
+                left: 20px;
+                border-color: transparent transparent #FFFFFF transparent;
+            }
+        }
+    }
+
+    .dark .popover.tool-tip{
+        filter: drop-shadow(0px 0px 2px #f5f3f3);
+        &:before {
+            border-color: transparent transparent #5C6166 transparent;
+        }
+    }

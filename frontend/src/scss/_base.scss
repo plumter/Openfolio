@@ -1,0 +1,74 @@
+html {
+    @apply bg-grey-1 text-black-1 font-normal;
+    
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover, 
+    textarea:-webkit-autofill:focus, 
+    textarea:-webkit-autofill:active,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover, 
+    select:-webkit-autofill:focus, 
+    select:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px white inset !important; 
+    }
+
+    &.dark {
+        @apply bg-dark text-white;
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover, 
+        textarea:-webkit-autofill:focus, 
+        textarea:-webkit-autofill:active,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover, 
+        select:-webkit-autofill:focus, 
+        select:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px #1A1A1A inset !important; 
+        }
+
+        input:-webkit-autofill, 
+        textarea:-webkit-autofill,
+        select:-webkit-autofill {
+            -webkit-text-fill-color: white !important;
+        }
+    }
+
+    .appearance-none::-webkit-inner-spin-button, 
+    .appearance-none::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+    }
+
+    .appearance-none {
+        -moz-appearance: textfield;
+    }
+
+    input[type=checkbox], input[type=radio] {
+        ~ label, ~ div {
+            @apply opacity-60;
+        }
+    }
+
+    input:checked ~ label {
+        @apply opacity-100;
+    }
+    
+    input:checked + div {
+        @apply border-primary  dark:border-primary opacity-100 #{!important};
+    }
+    
+    input[type=checkbox]:checked + div {
+        @apply bg-primary  #{!important};
+    }
+
+    input:checked + div svg {
+        @apply block;
+    }
+
+}
