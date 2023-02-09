@@ -47,7 +47,8 @@ module.exports = {
           },
           grey: {
             1: "#F6F7FA",
-            2: "#91979E"
+            2: "#91979E",
+            3: "#AEB5BE",
           },
           black: {
             1: "#02050A"
@@ -61,6 +62,7 @@ module.exports = {
             faint: "#FEF2F2",
             light: "#FEE6E4",
             DEFAULT: "#F34035",
+            1: "#EC191C",
           },
           warn: {
             light: "#FEF0E4",
@@ -69,6 +71,9 @@ module.exports = {
           dark: {
             DEFAULT: '#212326',
             1: "#0B0D0F",
+            2: "#5C6166",
+            3: "#111E31",
+            4: "#E7E7E7",
 
           }
         }
