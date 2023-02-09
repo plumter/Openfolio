@@ -2,7 +2,7 @@
     /** Reusable Classes **/
 
     .form-input {
-        @apply w-full mt-2 mb-0 px-4 py-3.5 md:py-3 border rounded-lg md:rounded-xl text-gray-700 text-base placeholder-grey-3  focus:outline-none focus:border-primary focus:border-1.5 focus:invalid:border-danger focus:valid:border-primary dark:bg-dark-1 dark:border-dark dark:placeholder-dark-2 dark:text-dark-4;
+        @apply w-full mt-2 mb-0 px-5 py-3.5 md:py-3.5 border rounded-[3.9rem] text-gray-700 text-base placeholder-grey-3  focus:outline-none focus:border-primary focus:border-1.5 focus:invalid:border-danger focus:valid:border-primary dark:bg-dark-1 dark:border-dark dark:placeholder-dark-2 dark:text-dark-4;
     }
 
     .search-input {
@@ -21,85 +21,12 @@
         }
     }
 
+    .btn {
+        @apply text-sm font-medium text-white hover:text-white py-4 px-8 rounded-[3.9rem] disabled:opacity-60;
+    }
+
     .btn-primary {
-        @apply text-sm bg-primary hover:bg-primary-dark disabled:hover:bg-primary font-medium text-white hover:text-white py-4 px-8 rounded-xl disabled:opacity-60;
-    }
-
-    .btn-success {
-        @apply btn-primary bg-success hover:bg-success disabled:hover:bg-success;  
-    }
-
-    .btn-danger {
-        @apply btn-primary bg-danger hover:bg-danger-1 disabled:hover:bg-danger;  
-    }
-
-    .btn-warn {
-        @apply btn-primary bg-warn hover:bg-warn disabled:hover:bg-warn;  
-    }
-    
-    .btn-success-outline {
-        @apply btn-primary border-success border text-success hover:text-success bg-inherit hover:bg-inherit disabled:hover:bg-inherit hover:opacity-80;  
-    }
-
-    .btn-warn-outline {
-        @apply btn-primary border-warn border text-warn hover:text-warn bg-inherit hover:bg-inherit disabled:hover:bg-inherit hover:opacity-80;  
-    }
-
-
-    .btn-grey {
-        @apply  text-sm border bg-grey-1 hover:opacity-90 font-medium text-grey-2 py-4 px-8 rounded-xl  disabled:opacity-75 dark:bg-black-1 dark:border-dark;
-    }
-
-    .btn-outline {
-        @apply text-sm hover:opacity-90 font-medium text-grey-2 py-4 px-8 rounded-xl border disabled:opacity-75 dark:border-dark;
-    }
-
-    .btn-md {
-        @apply px-4 py-2.5 text-sm rounded-lg;
-    }
-
-    .btn-link {
-        @apply font-medium hover:opacity-80
-    }
-
-    .btn-link-primary {
-        @apply btn-link text-primary;
-    }
-
-    .btn-link-danger {
-        @apply btn-link text-danger;
-    }
-
-    .btn-link-grey-2 {
-        @apply btn-link text-grey-2;
-    }
-
-    .btn-link-warn {
-        @apply btn-link text-warn;
-    }
-
-    .link {
-        @apply font-medium text-sm text-primary hover:text-primary-dark;
-    }
-
-    .status-class {
-        @apply text-xs px-2 py-1 whitespace-nowrap font-medium rounded;
-    }
-
-    .error-status, .danger-status {
-        @apply status-class text-danger bg-danger-light;
-    }
-
-    .success-status {
-        @apply status-class text-success bg-success-light;
-    }
-
-    .pending-status {
-        @apply status-class text-primary bg-primary-light;
-    }
-
-    .warn-status {
-        @apply status-class text-warn bg-warn-light;
+        @apply btn bg-primary hover:bg-primary-dark disabled:hover:bg-primary;
     }
 
     .drop-down-icon {
