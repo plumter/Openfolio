@@ -1,3 +1,4 @@
+import { dialCodeSet } from "app/common/data/countries";
 
 /**
  * Delay Execution logic
@@ -116,3 +117,53 @@ export const formValidator = (form, validState) => {
 export const ucFirst = (s, othersLower = true) => {
     return s && s[0].toUpperCase() + (othersLower ? s.slice(1)?.toLowerCase() : s.slice(1));
 }
+
+/**
+ * Form File to blob
+ * @param {File} file 
+ * @returns 
+ */
+export const fileToBlob = file => new Promise((res, rej) => {
+    const fr = new FileReader()
+    fr.readAsArrayBuffer(file);
+    fr.onload = _ => res(new Blob([fr.result]));
+});
+
+/**
+ * Convert Heic/Heif to png
+ * @param {File} file 
+ * @returns 
+ */
+export const convertHeicHeifToPNG = async file => {
+    const blob = await fileToBlob(file);
+    const conversionBlob = await window.heic2any({ blob, toType: "image/png", quality: 1  });
+    return new File([conversionBlob], `${file.name?.split('.').slice(0, -1).join('.')}.png`, {type:"image/png", lastModified:new Date().getTime()})
+} 
+
+
+/**
+ * Separate Phone Number to country code and phone where applicable
+ * @param {string} phone Number with code
+ * @param {string} defaultCountryCode if not set
+ * @returns 
+ */
+export const separatePhoneAndDialCode = (phoneNumber, defaultCountryCode = "+234") => {
+
+    const obj = {countryCode: defaultCountryCode, phone: null}
+    if (!phoneNumber){
+        return obj;
+    }
+    if (phoneNumber.length > 4){
+        if (dialCodeSet.has(phoneNumber.substr(0, 4))){
+            return {countryCode: phoneNumber.substr(0, 4), phone: phoneNumber.substr(4)}
+        }
+        if (dialCodeSet.has(phoneNumber.substr(0, 3))){
+            return {countryCode: phoneNumber.substr(0, 3), phone: phoneNumber.substr(3)}
+        }
+        if (dialCodeSet.has(phoneNumber.substr(0, 2))){
+            return {countryCode: phoneNumber.substr(0, 2), phone: phoneNumber.substr(2)}
+        }
+    }
+  
+    return obj;
+  }

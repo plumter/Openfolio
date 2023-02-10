@@ -15,7 +15,7 @@ const Home = _ => {
         console.log({email})
     }
 
-    return  <div className="my-auto pt-24">
+    return  <div className="my-auto pt-24 sm:w-[33rem] mx-auto px-7 sm:px-10">
                 <form onSubmit={handleSubmit} ref={formRef} >
                     <div className="lg:px-5">
                         <div

@@ -1,10 +1,10 @@
 
 // Layout
 .layout {
-    @apply w-full xl:w-7/12 xxl:w-6/12 bg-white px-7 sm:px-11 my-auto flex justify-center  text-sm dark:bg-black-1; min-height: calc(100vh);
+    @apply w-full xl:w-7/12 xxl:w-6/12 bg-white my-auto flex justify-center  text-sm dark:bg-black-1; min-height: calc(100vh);
 
     > div {
-        @apply my-auto pb-20 pt-10 flex flex-col min-h-screen justify-center; width: 27rem;
+        @apply my-auto pb-10 lg:pb-20 pt-10 flex flex-col min-h-screen justify-center w-full;
     }
 }
 
