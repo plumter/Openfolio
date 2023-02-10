@@ -112,6 +112,7 @@ const ImageCrop = ({img, onCrop}) => {
                 <div className="py-5 space-x-4 font-medium text-primary">
                     
                     <button
+                        type="button" 
                         onClick={_ => setZoom(zoom - 0.1)}
                     >
                         <SVG
@@ -123,6 +124,7 @@ const ImageCrop = ({img, onCrop}) => {
                         Zoom Image
                     </span>
                     <button
+                        type="button" 
                         onClick={_ => setZoom(zoom + 0.1)}
                     >
                         <SVG

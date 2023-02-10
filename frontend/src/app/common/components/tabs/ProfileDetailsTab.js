@@ -16,7 +16,7 @@ const ProfileDetailsTab = _ => {
     return  <div>
                 <form ref={formRef} >
                     <div className="py-14">
-                        <UserImage />
+                        <UserImage edit={true} />
                     </div>
                     <div className="space-y-7">
                         <FormInput

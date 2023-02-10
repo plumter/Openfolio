@@ -38,7 +38,7 @@ const ProfileImageModal = ({file, ...props}) => {
                         <ResponsiveCol reverse={true} className="mb-2">
                             <button 
                                 type="button" 
-                                className="w-full btn-outline" 
+                                className="w-full btn-outlined" 
                                 onClick={_ => props.toggle()}
                             >
                                 Cancel

@@ -18,9 +18,9 @@ const ImageUpload = props => {
     }
 
     return  <div>
-                <div className="link text-center cursor-pointer">
+                <div className="text-center">
                     <CustomFileUpload 
-                        label="Change Image"
+                        label={<span className=" cursor-pointer text-primary font-medium" >Change Image</span>}
                         key={`file-${Date.now()}`}
                         onChange={fileSelected}
                         accept=".jpg,.jpeg,.png,.heic,.heif"
