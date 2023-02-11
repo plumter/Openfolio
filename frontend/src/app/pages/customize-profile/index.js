@@ -1,5 +1,5 @@
-import ProfileDetailsTab from "app/common/components/tabs/ProfileDetailsTab";
-import QrCodeTab from "app/common/components/tabs/QrCodeTab";
+import ProfileDetailsTab from "app/pages/customize-profile/components/tabs/ProfileDetailsTab";
+import QrCodeTab from "app/pages/customize-profile/components/tabs/QrCodeTab";
 import { useState } from "react";
 
 

@@ -1,5 +1,5 @@
 import CustomFileUpload from "app/common/components/CustomFileUpload";
-import ProfileImageModal from "app/common/components/modals/ProfileImageModal";
+import ProfileImageModal from "app/pages/customize-profile/components/modals/ProfileImageModal";
 import { convertHeicHeifToPNG } from "app/common/util/Helpers";
 import { useState } from "react";
 
