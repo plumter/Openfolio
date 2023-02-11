@@ -45,7 +45,7 @@ const ProfileDetailsTab = _ => {
                             required
                             minLength="2"
                             validation={validation}
-                            prefix={<span className="border-r pr-2 pl-1 pb-1 inline-block"> 
+                            prefix={<span className="border-r pr-2 pl-1 pb-1 inline-block dark:border-r-dark"> 
                                     <SVG
                                         src="/assets/media/svg/company.svg"
                                         className="stroke-current w-5 inline-block"

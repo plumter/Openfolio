@@ -78,7 +78,7 @@ const ViewProfile = _ => {
                     {
                         data.map((item, i) => <div
                                                     key={i}
-                                                    className="border-b text-grey-2 flex p-5 sm:px-8 sm:py-7"
+                                                    className="border-b text-grey-2 flex p-5 sm:px-8 sm:py-7 dark:border-dark"
                                                 >
                                                     <span
                                                         className="inline-block flex-none my-auto bg-black-1 dark:bg-white p-2.5 rounded-full"

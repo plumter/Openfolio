@@ -34,7 +34,7 @@
     }
 
     .btn-outlined {
-        @apply btn text-grey-2 border hover:text-grey-2 hover:opacity-80;
+        @apply btn text-grey-2 border hover:text-grey-2 dark:border-dark hover:opacity-80;
     }
 
     .btn-md {
