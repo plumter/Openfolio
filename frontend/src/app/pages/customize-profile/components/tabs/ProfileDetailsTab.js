@@ -4,6 +4,7 @@ import UserImage from "app/common/components/UserImage";
 import useValidation from "app/common/custom-hooks/useValidation";
 import { useRef } from "react";
 import SVG from "react-inlinesvg";
+import { Link } from "react-router-dom";
 
 
 const ProfileDetailsTab = _ => {
@@ -80,9 +81,9 @@ const ProfileDetailsTab = _ => {
                         </div>
                     </div>
                     <div className="mt-10 mb-7">
-                        <button
-                            className="btn-outlined w-full px-2.5 sm:px-4"
-                            type="button"
+                        <Link
+                            className="block btn-outlined w-full px-2.5 sm:px-4 text-center"
+                            to="/preview"
                         >
                             <SVG
                                 src="/assets/media/svg/eye.svg"
@@ -91,7 +92,7 @@ const ProfileDetailsTab = _ => {
                             <span className="inline-block px-2">
                                 Preview Profile
                             </span>
-                        </button>
+                        </Link>
                     </div>
                 </form>
             </div>

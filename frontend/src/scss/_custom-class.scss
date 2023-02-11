@@ -25,8 +25,20 @@
         @apply btn bg-primary hover:bg-primary-dark disabled:hover:bg-primary;
     }
 
+    .btn-danger {
+        @apply btn bg-danger hover:opacity-90 disabled:hover:bg-danger;
+    }
+
+    .btn-white {
+        @apply btn bg-white  hover:bg-white  disabled:hover:bg-white text-black-1 hover:text-black-1 hover:opacity-90;
+    }
+
     .btn-outlined {
         @apply btn text-grey-2 border hover:text-grey-2 hover:opacity-80;
+    }
+
+    .btn-md {
+        @apply px-4 py-2.5 text-sm;
     }
 
     
