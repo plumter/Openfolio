@@ -1,0 +1,65 @@
+
+    /** Reusable Classes **/
+
+    .form-input {
+        @apply w-full mt-2 mb-0 px-5 py-3.5 md:py-3.5 border rounded-[3.9rem] text-gray-700 text-base placeholder-grey-3  focus:outline-none focus:border-primary focus:border-1.5 focus:invalid:border-danger focus:valid:border-primary dark:bg-dark-1 dark:border-dark dark:placeholder-dark-2 dark:text-dark-4;
+    }
+
+    .search-input {
+        @apply w-80 mt-2 mb-2 pr-4 border text-grey-2 focus:outline-none rounded-md  pl-10 py-3.5 md:py-3  text-xs;
+    }
+
+    .custom-select {
+        @apply form-input bg-white invalid:text-black-1 pr-10 drop-down-icon;
+    }
+
+    .form-label {
+        @apply block font-medium text-sm text-black-1 dark:text-white pb-1;
+    }
+
+    .btn {
+        @apply text-sm font-medium text-white hover:text-white py-4 px-8 rounded-[3.9rem] disabled:opacity-60;
+    }
+
+    .btn-primary {
+        @apply btn bg-primary hover:bg-primary-dark disabled:hover:bg-primary;
+    }
+
+    .btn-danger {
+        @apply btn bg-danger hover:opacity-90 disabled:hover:bg-danger;
+    }
+
+    .btn-white {
+        @apply btn bg-white  hover:bg-white  disabled:hover:bg-white text-black-1 hover:text-black-1 hover:opacity-90;
+    }
+
+    .btn-outlined {
+        @apply btn text-grey-2 border hover:text-grey-2 dark:border-dark hover:opacity-80;
+    }
+
+    .btn-md {
+        @apply px-4 py-2.5 text-sm;
+    }
+
+    
+
+    .drop-down-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.6 1.45801L9.16667 6.89134C8.525 7.53301 7.475 7.53301 6.83333 6.89134L1.4 1.45801' stroke='%2302050A' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-print-color-adjust: exact;
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 0.6rem 0.6rem;
+    }
+
+    .dark .drop-down-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.6 1.45801L9.16667 6.89134C8.525 7.53301 7.475 7.53301 6.83333 6.89134L1.4 1.45801' stroke='%23FFFFFF' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    }
+
+    .collapse.drop-down-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 6.5L6 1.5L11 6.5' stroke='%233581F3' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    }
+
+   

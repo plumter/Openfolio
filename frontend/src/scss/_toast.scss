@@ -1,0 +1,36 @@
+#ct-container {
+    padding-top: calc(5vh);
+
+    .ct-toast {
+
+        @apply rounded-2xl p-4 text-xs text-white  #{!important};
+        
+        &.ct-toast-error {
+            @apply bg-danger;
+        }
+
+        &.ct-toast-success {
+            @apply bg-success;
+        }
+
+        &.ct-toast-warn {
+            @apply bg-warn;
+        }
+
+        &.ct-toast-info {
+            @apply bg-primary;
+        }
+
+        .cont {
+            @apply flex leading-5 font-semibold;
+
+            div:first-child {
+                @apply flex-1 pr-5; min-width: 16.5rem;
+            }
+
+            svg {
+                @apply stroke-current flex-none cursor-pointer hover:opacity-75 my-auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.country-select {
+    @apply text-black-1;
+
+    > button {
+        @apply custom-select border-grey-5 pr-5 bg-none py-3 md:py-2.5 text-sm pl-2;
+
+
+        &::after {
+            border-top: 5px solid theme('colors.black.1');
+        }
+
+        &[aria-expanded="true"]::after{
+            border-bottom: 5px solid theme('colors.black.1');
+        }
+    }
+
+    > ul {
+        @apply border-gray-300 ;
+
+        > div {
+            @apply pr-1;
+            input {
+                @apply my-1 px-4 py-2 pl-8 border rounded text-gray-700 text-sm placeholder-black-1;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 15 14'%3e%3cpath stroke='%23999999' d='M14.0002 13.4999L11.0095 10.5039L14.0002 13.4999ZM12.6668 6.49992C12.6668 8.00281 12.0698 9.44415 11.0071 10.5069C9.94439 11.5696 8.50306 12.1666 7.00016 12.1666C5.49727 12.1666 4.05593 11.5696 2.99322 10.5069C1.93052 9.44415 1.3335 8.00281 1.3335 6.49992C1.3335 4.99703 1.93052 3.55569 2.99322 2.49298C4.05593 1.43027 5.49727 0.833252 7.00016 0.833252C8.50306 0.833252 9.94439 1.43027 11.0071 2.49298C12.0698 3.55569 12.6668 4.99703 12.6668 6.49992V6.49992Z' stroke-linecap='round'/%3e%3c/svg%3e");
+                background-position: left 0.7rem center;
+                background-repeat: no-repeat;
+                background-size: 0.8rem 0.8rem;
+                // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 17'%3e%3ccircle stroke='%23999999' cx='7.82491' cy='7.8254' r='6.74142' stroke-width='1.5' stroke-linecap='round'/%3e%3cpath stroke='%23999999' d='M12.5137 12.8643L15.1567 15.5004' stroke-width='1.5' stroke-linecap='round'/%3e%3c/svg%3e");
+                
+            }
+        }
+        li {
+            @apply hover:bg-secondary-light my-0;
+            
+            span {
+                @apply text-sm py-1;
+            }
+        }
+    }
+
+    &.white-bg > button {
+        @apply bg-white;
+    }
+
+    svg {
+        @apply rounded-full w-4;
+    }
+}

@@ -1,0 +1,25 @@
+
+/**
+
+Tailwind Custom styling and CSS Ovrride
+
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    @import './base';
+    @import './layout';
+    @import './custom-class';
+    @import './popover';
+    @import './country-select';
+    @import './react-loading-skeleton';
+
+}
+
+@import './toast';
+
+
