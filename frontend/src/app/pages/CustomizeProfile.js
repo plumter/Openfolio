@@ -1,4 +1,5 @@
 import ProfileDetailsTab from "app/common/components/tabs/ProfileDetailsTab";
+import QrCodeTab from "app/common/components/tabs/QrCodeTab";
 import { useState } from "react";
 
 
@@ -25,6 +26,7 @@ const CustomizeProfile = _ => {
                     className="px-5 sm:px-10 2xl:px-14"
                 >
                     {   tab === "Profile Details" && <ProfileDetailsTab /> }
+                    {   tab === "QR Code" && <QrCodeTab /> }
                 </div>
             </div>
 }

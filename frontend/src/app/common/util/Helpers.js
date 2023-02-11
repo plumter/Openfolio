@@ -167,3 +167,12 @@ export const separatePhoneAndDialCode = (phoneNumber, defaultCountryCode = "+234
   
     return obj;
   }
+
+
+/**
+ * Generate Random string
+ * @returns {string}
+ */
+export const randomString = _ => {
+    return (Math.random() + 1).toString(36).substring(2);
+}
