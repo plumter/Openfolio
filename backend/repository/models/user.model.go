@@ -13,6 +13,7 @@ type User struct {
 	Position       string             `json:"position" bson:"position"`
 	Website        string             `json:"website" bson:"website"`
 	Phone          string             `json:"phone" bson:"phone"`
+	Token          string             `json:"token" bson:"token"`
 	CreatedAt      primitive.DateTime `json:"createdAt" bson:"createdAt"`
 	UpdatedAt      primitive.DateTime `json:"updatedAt" bson:"updatedAt"`
 }
