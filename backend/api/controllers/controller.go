@@ -88,3 +88,63 @@ func (u *UserController) SignIn(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, pkg.SuccessResponse(fmt.Sprintf("An email has been sent to %v, please click the link to continue", body.Email), resp))
 	return
 }
+
+func (u *UserController) Welcome(ctx *gin.Context) {
+	userStr, ok := ctx.Get("user")
+
+	if !ok {
+		ctx.JSON(http.StatusBadRequest, pkg.ErrorResponse("Failed to get user"))
+		return
+	}
+
+	user := userStr.(*models.User)
+
+	ctx.JSON(http.StatusOK, pkg.SuccessResponse("Ok", user))
+	return
+}
+
+type profileParams struct {
+	Name           string `json:"name" binding:"required"`
+	CompanyName    string `json:"companyName" binding:"required"`
+	CompanyAddress string `json:"companyAddress" binding:"required"`
+	Position       string `json:"position" binding:"required"`
+	Website        string `json:"website" binding:"required"`
+	Phone          string `json:"phone" binding:"required"`
+}
+
+func (u *UserController) UpdateProfile(ctx *gin.Context) {
+	var body profileParams
+
+	if err := ctx.ShouldBind(&body); err != nil {
+		MatchError(err, ctx)
+		return
+	}
+
+	userStr, ok := ctx.Get("user")
+
+	if !ok {
+		ctx.JSON(http.StatusBadRequest, pkg.ErrorResponse("Failed to get user"))
+		return
+	}
+
+	user := userStr.(*models.User)
+
+	data := bson.D{
+		{Key: "name", Value: body.Name},
+		{Key: "companyName", Value: body.CompanyName},
+		{Key: "companyAddress", Value: body.CompanyAddress},
+		{Key: "position", Value: body.Position},
+		{Key: "website", Value: body.Website},
+		{Key: "phone", Value: body.Phone},
+	}
+
+	_, err := u.Service.FindOneAndUpdateUser(ctx, bson.D{{Key: "email", Value: user.Email}}, bson.D{{Key: "$set", Value: data}})
+
+	if err != nil {
+		ctx.JSON(http.StatusBadRequest, pkg.ErrorResponse("Failed to update user, please try again later"))
+		return
+	}
+
+	ctx.JSON(http.StatusOK, pkg.SuccessResponse("You have updated your account", nil))
+	return
+}
