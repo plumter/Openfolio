@@ -5,7 +5,7 @@ import (
 )
 
 type User struct {
-	ID             primitive.ObjectID `json:"_id" bson:"_id"`
+	ID             primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
 	Email          string             `json:"email" bson:"email"`
 	Name           string             `json:"name" bson:"name"`
 	CompanyName    string             `json:"companyName" bson:"companyName"`
@@ -14,6 +14,6 @@ type User struct {
 	Website        string             `json:"website" bson:"website"`
 	Phone          string             `json:"phone" bson:"phone"`
 	Token          string             `json:"token" bson:"token"`
-	CreatedAt      primitive.DateTime `json:"createdAt" bson:"createdAt"`
-	UpdatedAt      primitive.DateTime `json:"updatedAt" bson:"updatedAt"`
+	CreatedAt      primitive.DateTime `json:"createdAt" bson:"created_at,omitempty"`
+	UpdatedAt      primitive.DateTime `json:"updatedAt" bson:"updated_at,omitempty"`
 }

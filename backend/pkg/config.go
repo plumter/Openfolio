@@ -8,12 +8,16 @@ import (
 
 type Configurations struct {
 	AccessTokenDuration time.Duration `mapstructure:"ACCESS_TOKEN_DURATION"`
+	TokenSymmetricKey   string        `mapstructure:"TOKEN_SYMMETRIC_KEY"`
+	MongoDBUrl          string        `mapstructure:"MONGO_DB_URL"`
+	DatabaseName        string        `mapstructure:"DATABASE_NAME"`
+	ServerAddress       string        `mapstructure:"SERVER_ADDRESS"`
 }
 
 func LoadEnv(path string) (config Configurations, err error) {
 	viper.AddConfigPath(path)
 	viper.SetConfigName("dev")
-	viper.SetConfigFile("env")
+	viper.SetConfigType("env")
 
 	viper.AutomaticEnv()
 

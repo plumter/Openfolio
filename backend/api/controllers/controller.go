@@ -1,13 +1,16 @@
-package api
+package controllers
 
 import (
+	"fmt"
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/plumter/Openfolio/pkg"
 	"github.com/plumter/Openfolio/repository/models"
 	"github.com/plumter/Openfolio/token"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 type UserController struct {
@@ -17,7 +20,11 @@ type UserController struct {
 }
 
 type signInParam struct {
-	Email string `json:"email"`
+	Email string `json:"email" binding:"required"`
+}
+
+type signInResponseParam struct {
+	Token string `json:"token"`
 }
 
 func (u *UserController) SignIn(ctx *gin.Context) {
@@ -48,8 +55,10 @@ func (u *UserController) SignIn(ctx *gin.Context) {
 	if user == nil {
 		// create user
 		data := &models.User{
-			Email: body.Email,
-			Token: token,
+			Email:     body.Email,
+			Token:     token,
+			CreatedAt: primitive.NewDateTimeFromTime(time.Now()),
+			UpdatedAt: primitive.NewDateTimeFromTime(time.Now()),
 		}
 
 		_, err := u.Service.CreateUser(ctx, data)
@@ -59,8 +68,23 @@ func (u *UserController) SignIn(ctx *gin.Context) {
 			ctx.JSON(http.StatusBadRequest, pkg.ErrorResponse("Failed to create user, please try again later."))
 			return
 		}
+	} else {
+		filter := bson.D{{Key: "email", Value: body.Email}}
+		data := bson.D{{Key: "$set", Value: bson.D{{Key: "token", Value: token}, {Key: "updated_at", Value: primitive.NewDateTimeFromTime(time.Now())}}}}
+
+		_, err := u.Service.FindOneAndUpdateUser(ctx, filter, data)
+
+		if err != nil {
+			pkg.Logger(err)
+			ctx.JSON(http.StatusBadRequest, pkg.ErrorResponse("Failed to update user, please try again later."))
+			return
+		}
 	}
 
-	ctx.JSON(http.StatusOK, pkg.SuccessResponse("Ok", token))
+	resp := &signInResponseParam{
+		Token: token,
+	}
+
+	ctx.JSON(http.StatusOK, pkg.SuccessResponse(fmt.Sprintf("An email has been sent to %v, please click the link to continue", body.Email), resp))
 	return
 }

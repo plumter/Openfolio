@@ -18,7 +18,7 @@ func (m *mongoRepository) FindOneUser(ctx *gin.Context, filter primitive.D) (*mo
 
 	err := collection.FindOne(ctx, filter).Decode(&result)
 
-	if err == mongo.ErrNilDocument {
+	if err == mongo.ErrNoDocuments {
 		return nil, nil
 	}
 
