@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputWithFix Component Unit Testing Test InputWithFix Cases 1`] = `
+<div
+  className="relative my-auto"
+>
+  <input
+    className="form-input undefined undefined"
+    name="test1"
+    pattern="[\\\\d]{1,}"
+    placeholder="0.00"
+    required={true}
+    type="text"
+  />
+</div>
+`;
+
+exports[`InputWithFix Component Unit Testing Test InputWithFix Cases 2`] = `
+<div
+  className="relative my-auto"
+>
+  <div
+    className="absolute inset-y-0 left-0 flex items-center px-2"
+  >
+    <label
+      className=" rounded font-medium px-2 pt-2.5 text-sm dark:text-white cursor-pointer z-30"
+    >
+      $
+    </label>
+  </div>
+  <input
+    className="form-input pl-14 undefined"
+    name="test2"
+    pattern="[\\\\d\\\\.]{1,}"
+    placeholder="0.00"
+    required={true}
+    type="amount"
+  />
+</div>
+`;
+
+exports[`InputWithFix Component Unit Testing Test InputWithFix Cases 3`] = `
+<div
+  className="relative my-auto"
+>
+  <input
+    className="form-input undefined pr-14"
+    name="percent"
+    pattern="^(\\\\d{0,2}(\\\\.\\\\d+)?|100(\\\\.0+)?)$"
+    placeholder="0.00"
+    required={true}
+    type="text"
+  />
+  <div
+    className="absolute inset-y-0 right-0 flex items-center px-2 "
+  >
+    <label
+      className=" font-medium rounded px-2 pt-2.5 text-sm text-gray-600 z-50"
+    >
+      %
+    </label>
+  </div>
+</div>
+`;
+
+exports[`InputWithFix Component Unit Testing Test InputWithFix Cases 4`] = `
+<div
+  className="relative my-auto"
+>
+  <div
+    className="absolute inset-y-0 left-0 flex items-center px-2"
+  >
+    <label
+      className=" rounded font-medium px-2 pt-2.5 text-sm dark:text-white cursor-pointer z-30"
+    >
+      $
+    </label>
+  </div>
+  <input
+    className="form-input pl-14 pr-14"
+    name="amount"
+    pattern="[\\\\d\\\\.]{1,}"
+    placeholder="00"
+    required={true}
+    type="text"
+  />
+  <div
+    className="absolute inset-y-0 right-0 flex items-center px-2 "
+  >
+    <label
+      className=" font-medium rounded px-2 pt-2.5 text-sm text-gray-600 z-50"
+    >
+      .00
+    </label>
+  </div>
+</div>
+`;

@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomFileUpload Component Unit Testing CustomFileUpload Cases 1`] = `
+<div>
+  <div
+    className="flex border-2 border-dashed rounded-xl p-4 text-sm dark:border-dark hidden"
+  >
+    <img
+      alt="Doc"
+      className="flex-none mb-auto"
+      src="/assets/media/image/image.png"
+      width="24px"
+    />
+    <p
+      className="flex-1 my-auto pl-2 pr-4 dark:text-white"
+    />
+    <p
+      className="flex-none dark:text-white"
+    >
+      <button
+        className="text-danger font-medium"
+        onClick={[Function]}
+        type="button"
+      >
+        Remove
+      </button>
+    </p>
+  </div>
+  <div
+    className="null"
+  >
+    <label
+      className="block relative w-full border-2 border-dashed px-5 py-12 sm:px-10 sm:py-16 cursor-pointer text-center rounded-2xl dark:border-dark"
+      onDragEnter={[Function]}
+      onDragLeave={[Function]}
+      onDragOver={[Function]}
+      onDrop={[Function]}
+    >
+      <input
+        accept=".jpg, .png, .jpeg, .pdf, .heic, .heif"
+        className="absolute z-0 opacity-0 w-0"
+        id="doc-test1"
+        name="test1"
+        onChange={[Function]}
+        required={true}
+        type="file"
+      />
+      <p />
+      <h6
+        className=" font-semibold pt-4 pb-2 dark:text-white"
+      >
+        Click to upload Files or Drag to Drop
+      </h6>
+      <p
+        className="text-grey-3 text-sm"
+      >
+        Only PNG, JPG, PDF file formats are supported
+      </p>
+    </label>
+    <div
+      style={
+        Object {
+          "height": 0,
+          "visibility": "hidden",
+        }
+      }
+    >
+      <div
+        className="react-reveal text-xs mb-1 pt-2 text-red-500"
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
+      >
+        Document Upload Required
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CustomFileUpload Component Unit Testing CustomFileUpload Cases 2`] = `
+<div>
+  <div
+    className="flex border-2 border-dashed rounded-xl p-4 text-sm dark:border-dark hidden"
+  >
+    <img
+      alt="Doc"
+      className="flex-none mb-auto"
+      src="/assets/media/image/image.png"
+      width="24px"
+    />
+    <p
+      className="flex-1 my-auto pl-2 pr-4 dark:text-white"
+    />
+    <p
+      className="flex-none dark:text-white"
+    >
+      20%
+    </p>
+  </div>
+  <div
+    className="null"
+  >
+    <label
+      className="block relative w-full border-2 border-dashed px-5 py-12 sm:px-10 sm:py-16 cursor-pointer text-center rounded-2xl dark:border-dark"
+      onDragEnter={[Function]}
+      onDragLeave={[Function]}
+      onDragOver={[Function]}
+      onDrop={[Function]}
+    >
+      <input
+        accept=".jpg, .png, .jpeg, .pdf, .heic, .heif"
+        className="absolute z-0 opacity-0 w-0"
+        id="doc-test2"
+        name="test2"
+        onChange={[Function]}
+        required={true}
+        type="file"
+      />
+      <p />
+      <h6
+        className=" font-semibold pt-4 pb-2 dark:text-white"
+      >
+        Click to upload Files or Drag to Drop
+      </h6>
+      <p
+        className="text-grey-3 text-sm"
+      >
+        Only PNG, JPG, PDF file formats are supported
+      </p>
+    </label>
+    <div
+      style={
+        Object {
+          "height": 0,
+          "visibility": "hidden",
+        }
+      }
+    >
+      <div
+        className="react-reveal text-xs mb-1 pt-2 text-red-500"
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
+      >
+        Document Upload Required
+      </div>
+    </div>
+  </div>
+</div>
+`;

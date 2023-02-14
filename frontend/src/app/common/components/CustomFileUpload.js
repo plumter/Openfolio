@@ -40,7 +40,7 @@ const CustomFileUpload = ({name = "image", progress = 0, validation, onChange, r
     // Reset file input on remove
     useEffect(_ => {
         const ref = fileInputRef?.current;
-        if (!file && ref.value){
+        if (!file && ref?.value){
             ref.value = "";
             const event = new Event('input', { bubbles: true });
             ref.dispatchEvent(event);

@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput Component Unit Testing Test FormInput Cases 1`] = `
+<div>
+  <label
+    className="form-label"
+  >
+    Address:
+  </label>
+  <div
+    className="relative my-auto"
+  >
+    <input
+      className="form-input undefined undefined"
+      minLength="2"
+      name="address"
+      placeholder="Enter Company Address"
+      type="text"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "height": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="react-reveal text-xs mb-1 pt-2 text-red-500"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }
+    >
+      Enter Company Address
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FormInput Component Unit Testing Test FormInput Cases 2`] = `
+<div>
+  <label
+    className="form-label"
+  >
+    Company Name:
+    <span
+      className="text-danger"
+    >
+      *
+    </span>
+  </label>
+  <div
+    className="relative my-auto"
+  >
+    <div
+      className="absolute inset-y-0 left-0 flex items-center px-2"
+    >
+      <label
+        className=" rounded font-medium px-2 pt-2.5 text-sm dark:text-white cursor-pointer z-30"
+      >
+        <span
+          className="border-r pr-2 pl-1 pb-1 inline-block dark:border-r-dark"
+        />
+      </label>
+    </div>
+    <input
+      className="form-input pl-14 undefined"
+      minLength="2"
+      name="company"
+      placeholder="Enter Company Name"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "height": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="react-reveal text-xs mb-1 pt-2 text-red-500"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }
+    >
+      Enter Company Name
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FormInput Component Unit Testing Test FormInput Cases 3`] = `
+<div>
+  <label
+    className="form-label"
+  >
+    Email:
+    <span
+      className="text-danger"
+    >
+      *
+    </span>
+  </label>
+  <div
+    className="relative my-auto"
+  >
+    <input
+      className="form-input undefined undefined"
+      name="email"
+      placeholder="example@mail.com"
+      readOnly={true}
+      required={true}
+      type="email"
+      value="chineduegenti@gmail.com"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "height": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <div
+      className="react-reveal text-xs mb-1 pt-2 text-red-500"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }
+    >
+      example@mail.com
+    </div>
+  </div>
+</div>
+`;

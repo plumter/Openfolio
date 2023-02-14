@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputError Component Unit Testing Test InputError Cases 1`] = `
+<div
+  style={
+    Object {
+      "height": 0,
+      "visibility": "hidden",
+    }
+  }
+>
+  <div
+    className="react-reveal text-xs mb-1 pt-2 text-red-500"
+    style={
+      Object {
+        "opacity": 0,
+      }
+    }
+  >
+    Enter a valid email address
+  </div>
+</div>
+`;
+
+exports[`InputError Component Unit Testing Test InputError Cases 2`] = `
+<div
+  style={
+    Object {
+      "height": 0,
+      "visibility": undefined,
+    }
+  }
+>
+  <div
+    className="react-reveal text-xs mb-1 pt-2 text-red-500"
+    style={
+      Object {
+        "opacity": undefined,
+      }
+    }
+  >
+    Enter a valid email address
+  </div>
+</div>
+`;
+
+exports[`InputError Component Unit Testing Test InputError Cases 3`] = `
+<div
+  style={
+    Object {
+      "height": 0,
+      "visibility": "hidden",
+    }
+  }
+>
+  <div
+    className="react-reveal text-xs mb-1 pt-2 text-red-500"
+    style={
+      Object {
+        "opacity": 0,
+      }
+    }
+  >
+    Enter a valid email address
+  </div>
+</div>
+`;

@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomSelect Component Unit Testing CustomSelect Cases 1`] = `
+Array [
+  <input
+    className="absolute z-0 opacity-0"
+    defaultValue=""
+    name="letters"
+    required={true}
+    type="text"
+  />,
+  <button
+    className="block text-left pr-14 drop-down-icon pl-4 form-input focus:border-danger"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="text-grey-3"
+    >
+       
+      Select Letters
+    </span>
+  </button>,
+  <div
+    className="hidden  popover"
+  >
+    <div
+      className="opt-cont divide-y divide-grey-5 dark:divide-dark-1"
+    >
+      <button
+        className="text-sm w-full px-4 py-2.5 text-left dark:text-white hover:bg-secondary-light dark:hover:bg-dark-5"
+        onClick={[Function]}
+        type="button"
+      >
+        A
+      </button>
+      <button
+        className="text-sm w-full px-4 py-2.5 text-left dark:text-white hover:bg-secondary-light dark:hover:bg-dark-5"
+        onClick={[Function]}
+        type="button"
+      >
+        B
+      </button>
+      <button
+        className="text-sm w-full px-4 py-2.5 text-left dark:text-white hover:bg-secondary-light dark:hover:bg-dark-5"
+        onClick={[Function]}
+        type="button"
+      >
+        C
+      </button>
+    </div>
+  </div>,
+]
+`;
+
+exports[`CustomSelect Component Unit Testing CustomSelect Cases 2`] = `
+Array [
+  <input
+    className="absolute z-0 opacity-0"
+    defaultValue=""
+    name="letters"
+    required={true}
+    type="text"
+  />,
+  <button
+    className="block text-left pr-14 drop-down-icon pl-4 form-input focus:border-danger"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="text-grey-3"
+    >
+       
+      Select Letters
+    </span>
+  </button>,
+  <div
+    className="hidden  popover"
+  >
+    <div
+      className="px-4 pt-1 pb-2"
+      onClick={[Function]}
+    >
+      <div
+        className="relative my-auto"
+      >
+        <div
+          className="absolute inset-y-0 left-0 flex items-center px-2"
+        >
+          <label
+            className=" rounded font-medium px-2 pt-2.5 text-sm dark:text-white cursor-pointer z-30"
+          />
+        </div>
+        <input
+          className="form-input py-1 valid:focus:border-grey-1 dark:valid:focus:border-dark-1 pl-8"
+          onChange={[Function]}
+          placeholder="Search..."
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="opt-cont divide-y divide-grey-5 dark:divide-dark-1"
+    />
+  </div>,
+]
+`;
+
+exports[`CustomSelect Component Unit Testing CustomSelect Cases 3`] = `
+Array [
+  <input
+    className="absolute z-0 opacity-0"
+    defaultValue=""
+    name="letters"
+    required={true}
+    type="text"
+  />,
+  <button
+    className="block text-left pr-14 drop-down-icon pl-4 form-input focus:border-danger"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="text-grey-3"
+    >
+       
+      Select Letters
+    </span>
+  </button>,
+  <div
+    className="hidden  popover"
+  >
+    <div
+      className="px-4 pt-1 pb-2"
+      onClick={[Function]}
+    >
+      <div
+        className="relative my-auto"
+      >
+        <div
+          className="absolute inset-y-0 left-0 flex items-center px-2"
+        >
+          <label
+            className=" rounded font-medium px-2 pt-2.5 text-sm dark:text-white cursor-pointer z-30"
+          />
+        </div>
+        <input
+          className="form-input py-1 valid:focus:border-grey-1 dark:valid:focus:border-dark-1 pl-8"
+          onChange={[Function]}
+          placeholder="Search..."
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="opt-cont divide-y divide-grey-5 dark:divide-dark-1"
+    />
+  </div>,
+]
+`;
+
+exports[`CustomSelect Component Unit Testing CustomSelect Cases 4`] = `
+Array [
+  <input
+    className="absolute z-0 opacity-0"
+    defaultValue=""
+    name="letters"
+    required={true}
+    type="text"
+  />,
+  <button
+    className="block text-left pr-14 drop-down-icon pl-4 form-input focus:border-danger"
+    onClick={[Function]}
+    type="button"
+  >
+    nullnull
+  </button>,
+  <div
+    className="hidden  popover"
+  >
+    <div
+      className="px-4 pt-1 pb-2"
+      onClick={[Function]}
+    >
+      <div
+        className="relative my-auto"
+      >
+        <div
+          className="absolute inset-y-0 left-0 flex items-center px-2"
+        >
+          <label
+            className=" rounded font-medium px-2 pt-2.5 text-sm dark:text-white cursor-pointer z-30"
+          />
+        </div>
+        <input
+          className="form-input py-1 valid:focus:border-grey-1 dark:valid:focus:border-dark-1 pl-8"
+          onChange={[Function]}
+          placeholder="Search..."
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="opt-cont divide-y divide-grey-5 dark:divide-dark-1"
+    />
+  </div>,
+]
+`;
+
+exports[`CustomSelect Component Unit Testing CustomSelect Cases 5`] = `
+Array [
+  <input
+    className="absolute z-0 opacity-0"
+    defaultValue=""
+    name="letters"
+    required={true}
+    type="text"
+  />,
+  <button
+    className="block text-left pr-14 drop-down-icon pl-4 form-input focus:border-danger"
+    onClick={[Function]}
+    type="button"
+  >
+    nullnullnull
+  </button>,
+  <div
+    className="hidden  popover"
+  >
+    <div
+      className="px-4 pt-1 pb-2"
+      onClick={[Function]}
+    >
+      <div
+        className="relative my-auto"
+      >
+        <div
+          className="absolute inset-y-0 left-0 flex items-center px-2"
+        >
+          <label
+            className=" rounded font-medium px-2 pt-2.5 text-sm dark:text-white cursor-pointer z-30"
+          />
+        </div>
+        <input
+          className="form-input py-1 valid:focus:border-grey-1 dark:valid:focus:border-dark-1 pl-8"
+          onChange={[Function]}
+          placeholder="Search..."
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="opt-cont divide-y divide-grey-5 dark:divide-dark-1"
+    />
+  </div>,
+]
+`;
