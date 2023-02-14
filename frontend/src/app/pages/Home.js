@@ -1,7 +1,11 @@
+import EmailSent from "app/common/components/EmailSent";
 import InputError from "app/common/components/InputError";
 import SpinnerButton from "app/common/components/SpinnerButton";
 import useValidation from "app/common/custom-hooks/useValidation";
+import toastMessage from "app/common/util/toastMessage";
+import { signIn } from "app/Queries";
 import { useRef } from "react";
+import { useMutation } from "react-query";
 import { Link } from "react-router-dom";
 
 
@@ -9,10 +13,22 @@ const Home = _ => {
 
     const formRef = useRef();
     const {validation, data: {email}} = useValidation(formRef);
+    const {isLoading, isSuccess, mutate, error, reset} = useMutation(signIn);
 
     // Form Submission process
     const handleSubmit = _ => {
-        console.log({email})
+        mutate({email})
+    }
+
+    // Display Error Message
+    if (error){
+        toastMessage("error", error.message);
+        reset();
+    }
+
+    // Show success screen on mail sent
+    if (isSuccess){
+        return <EmailSent email={email} />
     }
 
     return  <div className="my-auto pt-24 sm:w-[33rem] mx-auto px-7 sm:px-10">
@@ -59,6 +75,7 @@ const Home = _ => {
                                 type="submit" 
                                 disabled={!validation.allValid} 
                                 className="w-full btn-primary" 
+                                isLoading={isLoading}
                                 text="Send Sign-In Link"
                             />
                         </div>
