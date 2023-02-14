@@ -1,8 +1,8 @@
-import "../common/server";
+import "__test__/Integration/common/server";
 import {waitFor, screen, act} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { BrowserRouter } from 'react-router-dom';
-import { logoutUser, startApp, waitForToastMessage } from "../common/base";
+import { startApp, waitForToastMessage } from "__test__/Integration/common/base";
 
 // Start App
 beforeEach(async () => {
@@ -15,7 +15,7 @@ describe("Home Page Test", _ => {
   });
 
   it('Test Fail Sign-in Link Request', async () => {
-    // Input Email and password then Submit
+    // Input Email then Submit
     userEvent.type(screen.getByPlaceholderText('example@mail.com'), 'eni@plumter.com',);
     // Wait for validation debounce
     await act(() => new Promise(r => setTimeout(r, 80)));
@@ -26,7 +26,7 @@ describe("Home Page Test", _ => {
   });
 
   it('Test Successful Sign-in Link Request', async () => {
-    // Input Email and password then Submit
+    // Input Email then Submit
     userEvent.type(screen.getByPlaceholderText('example@mail.com'), 'hammed@plumter.com',);
     // Wait for validation debounce
     await act(() => new Promise(r => setTimeout(r, 80)));
