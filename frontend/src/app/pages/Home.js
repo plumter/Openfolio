@@ -2,6 +2,7 @@ import EmailSent from "app/common/components/EmailSent";
 import InputError from "app/common/components/InputError";
 import SpinnerButton from "app/common/components/SpinnerButton";
 import useValidation from "app/common/custom-hooks/useValidation";
+import { errorMessage } from "app/common/util/Helpers";
 import toastMessage from "app/common/util/toastMessage";
 import { signIn } from "app/Queries";
 import { useRef } from "react";
@@ -22,7 +23,8 @@ const Home = _ => {
 
     // Display Error Message
     if (error){
-        toastMessage("error", error.message);
+        const {message} = errorMessage(error);
+        toastMessage("error", message);
         reset();
     }
 

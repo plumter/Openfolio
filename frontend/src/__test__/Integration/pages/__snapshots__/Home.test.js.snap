@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page Test Test Home Page View 1`] = `
+<div
+  class="flex justify-center"
+  data-testid="current-page"
+>
+  <div
+    class="layout"
+  >
+    <div>
+      <div
+        class="my-auto pt-24 sm:w-[33rem] mx-auto px-7 sm:px-10"
+      >
+        <form>
+          <div
+            class="lg:px-5"
+          >
+            <div
+              class="flex pb-8"
+            >
+              <a
+                class="flex-none my-auto"
+                href="/"
+              >
+                <img
+                  alt="P"
+                  class="w-6"
+                  src="/assets/media/logos/logo.png"
+                />
+              </a>
+              <h2
+                class="pl-2 my-auto text-lg"
+              >
+                openfolio
+              </h2>
+            </div>
+            <div
+              class="pb-2"
+            >
+              <h6
+                class="font-semibold text-lg "
+              >
+                Enter your Email
+              </h6>
+              <p
+                class="text-grey-2 py-1.5"
+              >
+                Enter your email to receive a link to create, edit or manage your profile.
+              </p>
+              <input
+                class="form-input"
+                name="email"
+                pattern="[a-zA-Z0-9\\\\._%!$&*=^|~#%'\`?{}/\\\\-]+@([a-zA-Z0-9\\\\-]+\\\\.){1,}([a-zA-Z]{2,16})"
+                placeholder="example@mail.com"
+                required=""
+                type="email"
+              />
+              <div
+                style="height: 0px; visibility: hidden;"
+              >
+                <div
+                  class="react-reveal text-xs mb-1 pt-2 text-red-500"
+                  style="opacity: 0;"
+                >
+                  Enter a valid email address
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-4 mb-7"
+            >
+              <button
+                class="w-full btn-primary"
+                disabled=""
+                type="submit"
+              >
+                Send Sign-In Link
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <footer
+        class="mt-auto pt-12"
+      >
+        <div
+          class="flex justify-center"
+        >
+          <p
+            class="font-medium pr-2 my-auto"
+          >
+            Powered By:
+          </p>
+          <a
+            href="https://plumter.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="P"
+              class="w-7"
+              src="/assets/media/logos/plumter-logo.png"
+            />
+          </a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Home Page Test Test Successful Sign-in Link Request 1`] = `
+<div
+  class="flex justify-center"
+  data-testid="current-page"
+>
+  <div
+    class="layout"
+  >
+    <div>
+      <div
+        class="my-auto pt-24 sm:w-[33rem] mx-auto px-7 sm:px-10"
+      >
+        <div
+          class="mb-5 text-center"
+        />
+        <h6
+          class="flex-1 font-semibold text-lg text-center py-1.5"
+        >
+          Sign-In Link Sent
+        </h6>
+        <p
+          class="lg:px-8 text-center pb-8 text-grey-2 text-base"
+        >
+          We've sent an email with a sign-in link to 
+          <span
+            class="text-primary"
+          >
+             
+            hammed@plumter.com
+          </span>
+          . Check your inbox and click on the link provided to sign into Openfolio.
+        </p>
+      </div>
+      <footer
+        class="mt-auto pt-12"
+      >
+        <div
+          class="flex justify-center"
+        >
+          <p
+            class="font-medium pr-2 my-auto"
+          >
+            Powered By:
+          </p>
+          <a
+            href="https://plumter.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="P"
+              class="w-7"
+              src="/assets/media/logos/plumter-logo.png"
+            />
+          </a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+`;
