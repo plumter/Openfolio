@@ -176,3 +176,57 @@ export const separatePhoneAndDialCode = (phoneNumber, defaultCountryCode = "+234
 export const randomString = _ => {
     return (Math.random() + 1).toString(36).substring(2);
 }
+
+
+/**
+ * Extract Error Message
+ * @param {Object} error message object
+ * @return {object} message, errorCode
+ */
+export const errorMessage = (error, err5xxMsg = null) => {
+
+    const statusCode = error?.response?.status ?? 400;
+
+    if (error?.response?.status >= 500){
+        console.log({error});
+        return {statusCode, message: err5xxMsg ?? "Unable to process your request at this time. Contact support if error persist."}
+    }
+
+    if (error?.response?.status === 0){
+        console.log({error});
+        return {statusCode, message: err5xxMsg ?? "Unable to process your request."}
+    }
+
+    let message = "", errorCode = null;
+    if (error?.response?.data?.error) {
+        message = error.response.data.error;
+    }
+    else if (error.response?.data?.data?.errors && !Array.isArray(error.response.data.data.errors)) {
+        for (let key in error.response.data.data.errors) {
+            const val = error.response.data.data.errors[key];
+            message += `${Array.isArray(val) ? val[0] : val} `;
+        }
+    }
+    else if (error.response && typeof (error.response?.data?.message) === "object") {
+        for (let key in error.response.data.message) {
+            message += `${error.response.data.message[key]} `;
+        }
+    }
+    else if (error.response && typeof (error.response?.data?.message) === "string") {
+        message = error.response.data.message;
+        errorCode = error.response.data.errorCode;
+    }
+    else if (Array.isArray(error.data?.errors)) {
+        for (const err of error.data.errors) {
+            message += `${err.message ?? ""} `;
+        }
+    }
+    else if (error.message) {
+        message = error.message;
+    }
+    else {
+        message = `${error}`
+    }
+
+    return {statusCode, message, errorCode};
+}
