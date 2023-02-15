@@ -1,51 +1,75 @@
 import UserImage from "app/common/components/UserImage";
+import useQueryParam from "app/common/custom-hooks/useQueryParam";
+import { errorMessage } from "app/common/util/Helpers";
+import toastMessage from "app/common/util/toastMessage";
+import { fetchPublicProfile } from "app/Queries";
 import SVG from "react-inlinesvg";
-import { Link } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
+import { useQuery } from "react-query";
+import { Link, useParams } from "react-router-dom";
 
 
 const ViewProfile = _ => {
 
-    const data = [
+    const {id} = useParams();
+    const token = useQueryParam("token");
+    const {isSuccess, data, error} = useQuery(["public-profile", id], fetchPublicProfile);
+
+    const fields = [
         {
             icon: "globe",
             title: "Website:",
-            value: "panamasites.com"
+            value: data?.website
         },
         {
             icon: "address",
             title: "Address:",
-            value: "18B, Bento Road, Panama, USA"
+            value: data?.companyAddress
         },
         {
             icon: "mail",
             title: "Email:",
-            value: "chineduegenti@gmail.com"
+            value: data?.email
         },
         {
             icon: "phone",
             title: "Phone Number:",
-            value: "+234 814 116 0867"
+            value: data?.phone
         }
     ]
+
+    // Display Error Message
+    if (error){
+        const {message} = errorMessage(error);
+        toastMessage("error", message);
+    }
+
+    // Loading Screen
+    if (!isSuccess){
+        return <div className="p-5 -mt-10">
+                    <Skeleton count={1} height={300} className="mb-5" />
+                    <Skeleton count={5} height={80} className="mb-5" />
+                </div>
+    }
 
     return  <div>
                 <div className="pb-14 text-center text-white bg-black-1 -mt-10">
                     <div
                         className="sm:text-left sm:px-8 pt-8 pb-10"
                     >
-                        <Link
-                            className="inline-block btn-danger btn-md text-center"
-                            to="/customize"
-                        >
-                            <SVG
-                                src="/assets/media/svg/close.svg"
-                                className="stroke-current w-5 inline-block"
-                            />
-                            <span className="inline-block px-2">
-                                Close
-                            </span>
-                        </Link>
-
+                        {  token && <Link
+                                        className="inline-block btn-danger btn-md text-center"
+                                        to={`/profile?token=${token}`}
+                                    >
+                                        <SVG
+                                            src="/assets/media/svg/close.svg"
+                                            className="stroke-current w-5 inline-block"
+                                        />
+                                        <span className="inline-block px-2">
+                                            Close
+                                        </span>
+                                    </Link>
+                        }
                     </div>
                     <UserImage 
                         className="bg-dark"
@@ -53,10 +77,10 @@ const ViewProfile = _ => {
                     <h4
                         className=" text-xl font-semibold pt-2 pb-1"
                     >
-                        Tunde Anderson
+                        {data?.name || "--"}
                     </h4>
                     <p>
-                        M.D Panama Group of Companies
+                        {data?.position} {data?.companyName}
                     </p>
                     <p className="py-3.5">
                         <button
@@ -72,11 +96,10 @@ const ViewProfile = _ => {
                             </span>
                         </button>
                     </p>
-                    
                 </div>
                 <div >
                     {
-                        data.map((item, i) => <div
+                        fields.map((item, i) => <div
                                                     key={i}
                                                     className="border-b text-grey-2 flex p-5 sm:px-8 sm:py-7 dark:border-dark"
                                                 >
@@ -99,7 +122,7 @@ const ViewProfile = _ => {
                                                         <p
                                                             className="text-black-1 dark:text-white"
                                                         >
-                                                            {item.value}
+                                                            {item.value || "--"}
                                                         </p>
                                                     </div>
                                                     <SVG

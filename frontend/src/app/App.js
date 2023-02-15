@@ -12,8 +12,8 @@ const App = _ => {
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home/>} />
-                    <Route path="/customize" element={<CustomizeProfile />} />
-                    <Route path="/preview" element={<ViewProfile />} />
+                    <Route path="/profile" element={<CustomizeProfile />} />
+                    <Route path="/:id" element={<ViewProfile />} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             </Layout>
