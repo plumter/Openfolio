@@ -1,19 +1,47 @@
 import CustomRadio from "app/common/components/CustomRadio";
 import { ucFirst } from "app/common/util/Helpers";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import QRCode from "react-qr-code";
 
 
-const QrCodeTab = _ => {
+const QrCodeTab = ({data}) => {
 
+    const qrRef = useRef();
     const [qrColor, setQrColor] = useState("black");
 
+    // Download QR Code
+    const downloadQrCode = _ => {
+        const svg = qrRef.current;
+        const svgData = new XMLSerializer().serializeToString(svg);
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+        const img = new Image();
+        img.onload = () => {
+          canvas.width = img.width;
+          canvas.height = img.height;
+          ctx.drawImage(img, 0, 0);
+          const pngFile = canvas.toDataURL("image/png");
+          const downloadLink = document.createElement("a");
+          downloadLink.download = `${data?.name ?? "--"} QRCode`;
+          downloadLink.href = `${pngFile}`;
+          downloadLink.click();
+        };
+        img.src = `data:image/svg+xml;base64,${btoa(svgData)}`;
+    }
+
     return  <div>
-                <div className="py-10 my-10 rounded-3xl border dark:border-dark">
-                    <img 
-                        src={`/assets/media/image/qr-code-${qrColor}.png`}
-                        className="w-1/2 h-auto mx-auto" 
-                        alt="Qr Code" 
-                    />
+                <div className="py-10 my-10 rounded-3xl border dark:border-dark ">
+                    <div
+                            className={`w-1/2 mx-auto p-5 ${qrColor === "white" ? "bg-black-1" : "bg-white"}`}
+                    >
+                        <QRCode
+                            className={`h-auto w-full`} 
+                            value={`${window.location.protocol}//${window.location.host}/${data?._id}`}
+                            fgColor={qrColor === "white" ? "#FFFFFF" : "#000000"}
+                            bgColor={qrColor === "white" ? "#000000" : "#FFFFFF"}
+                            ref={qrRef}
+                        />
+                    </div>
                 </div>
                 <div className="my-5 rounded-3xl border dark:border-dark">
                     <h5
@@ -53,6 +81,7 @@ const QrCodeTab = _ => {
                     <button
                         className="btn-primary w-full px-2.5 sm:px-4"
                         type="button"
+                        onClick={downloadQrCode}
                     >
                         Download QR Code
                     </button>
