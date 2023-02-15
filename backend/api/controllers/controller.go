@@ -89,7 +89,7 @@ func (u *UserController) SignIn(ctx *gin.Context) {
 	return
 }
 
-func (u *UserController) Welcome(ctx *gin.Context) {
+func (u *UserController) Profile(ctx *gin.Context) {
 	userStr, ok := ctx.Get("user")
 
 	if !ok {
@@ -146,5 +146,47 @@ func (u *UserController) UpdateProfile(ctx *gin.Context) {
 	}
 
 	ctx.JSON(http.StatusOK, pkg.SuccessResponse("You have updated your account", nil))
+	return
+}
+
+type publicProfile struct {
+	Email          string `json:"email" bson:"email"`
+	Name           string `json:"name" bson:"name"`
+	CompanyName    string `json:"companyName" bson:"companyName"`
+	CompanyAddress string `json:"companyAddress" bson:"companyAddress"`
+	Position       string `json:"position" bson:"position"`
+	Website        string `json:"website" bson:"website"`
+	Phone          string `json:"phone" bson:"phone"`
+}
+
+func (u *UserController) PublicProfile(ctx *gin.Context) {
+	id, ok := ctx.Params.Get("id")
+
+	if !ok {
+		ctx.JSON(http.StatusBadRequest, pkg.ErrorResponse("Failed to get id"))
+		return
+	}
+
+	idHex, _ := primitive.ObjectIDFromHex(id)
+
+	filter := bson.D{{Key: "_id", Value: idHex}}
+	user, err := u.Service.FindOneUser(ctx, filter)
+
+	if err != nil || user == nil {
+		ctx.JSON(http.StatusBadRequest, pkg.ErrorResponse("User does not exist"))
+		return
+	}
+
+	publicUser := publicProfile{
+		Email:          user.Email,
+		Name:           user.Name,
+		CompanyName:    user.CompanyName,
+		CompanyAddress: user.CompanyAddress,
+		Position:       user.Position,
+		Website:        user.Website,
+		Phone:          user.Phone,
+	}
+
+	ctx.JSON(http.StatusOK, pkg.SuccessResponse("Ok", publicUser))
 	return
 }

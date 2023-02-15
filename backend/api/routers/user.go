@@ -27,10 +27,11 @@ func UserRoutes(routeConfig *UserRouteConfig) {
 		userGroup := v1.Group("user")
 		{
 			userGroup.POST("/signin", userController.SignIn)
+			userGroup.GET("/public/profile/:id", userController.PublicProfile)
 
 			userAuthGroup := userGroup.Group("profile").Use(middlewares.AuthMiddleware(routeConfig.TokenMaker, routeConfig.Service))
 			{
-				userAuthGroup.GET("/", userController.Welcome)
+				userAuthGroup.GET("/", userController.Profile)
 				userAuthGroup.PATCH("/", userController.UpdateProfile)
 			}
 		}

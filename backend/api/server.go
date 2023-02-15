@@ -2,6 +2,10 @@ package api
 
 import (
 	"fmt"
+	"html/template"
+	"net/http"
+	"os"
+	"strings"
 
 	"github.com/gin-gonic/gin"
 	"github.com/plumter/Openfolio/api/routers"
@@ -21,8 +25,19 @@ func NewServer(config pkg.Configurations, service models.Service) (*gin.Engine, 
 		return nil, fmt.Errorf("cannot create token maker: %e ", err)
 	}
 	router := gin.New()
+	router.SetFuncMap(template.FuncMap{
+		"upper": strings.ToUpper,
+	})
 	router.Use(gin.Logger())
 	router.Use(gin.Recovery())
+
+	router.Static("/assets", "./assets")
+
+	pwd, _ := os.Getwd()
+	router.LoadHTMLGlob(pwd + "/api/public/**/*.html")
+	router.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.html", nil)
+	})
 
 	organizationConfig := &routers.UserRouteConfig{
 		TokenMaker: tokenMaker,
