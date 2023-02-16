@@ -21,3 +21,7 @@ export const fetchMyProfile = async ({ queryKey }) => {
     return data?.data?.data;
 }
 
+export const updateProfile = ([token, data]) => {
+    return axios.patch(`${BASE_URL}/user/profile`, data, { headers: { "Authorization": `Bearer ${token}` } });
+}
+

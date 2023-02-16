@@ -24,6 +24,7 @@ const ImageUpload = props => {
                         key={`file-${Date.now()}`}
                         onChange={fileSelected}
                         accept=".jpg,.jpeg,.png,.heic,.heif"
+                        required={false}
                     />
                 </div>
                 <ProfileImageModal
