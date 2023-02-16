@@ -230,3 +230,16 @@ export const errorMessage = (error, err5xxMsg = null) => {
 
     return {statusCode, message, errorCode};
 }
+
+/**
+ * Copy Text to Clip Board
+ * @param {string} text 
+ */
+export const copyToClipBoard = text => {
+    const el = document.createElement('input');
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+}

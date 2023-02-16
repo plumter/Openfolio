@@ -1,3 +1,4 @@
+import CustomPopover from "app/common/components/CustomPopover";
 import UserImage from "app/common/components/UserImage";
 import useQueryParam from "app/common/custom-hooks/useQueryParam";
 import { errorMessage } from "app/common/util/Helpers";
@@ -7,6 +8,7 @@ import SVG from "react-inlinesvg";
 import Skeleton from "react-loading-skeleton";
 import { useQuery } from "react-query";
 import { Link, useParams } from "react-router-dom";
+import ShareDropDown from "app/common/components/ShareDropDown"
 
 
 const ViewProfile = _ => {
@@ -83,18 +85,28 @@ const ViewProfile = _ => {
                         {data?.position} {data?.companyName}
                     </p>
                     <p className="py-3.5">
-                        <button
-                            className="btn-white btn-md text-center"
-                            type="button"
+                        <CustomPopover
+                            placement="bottom-start"
+                            offset={[0, 8]}
+                            className="w-40"
                         >
-                            <SVG
-                                src="/assets/media/svg/share.svg"
-                                className="stroke-current w-5 inline-block"
+                            <button
+                                className="btn-white btn-md text-center"
+                                type="button"
+                            >
+                                <SVG
+                                    src="/assets/media/svg/share.svg"
+                                    className="stroke-current w-5 inline-block"
+                                />
+                                <span className="inline-block px-2">
+                                    Share
+                                </span>
+                            </button>
+                            <ShareDropDown
+                                url={`${window.location.origin}/${id}`} 
+                                title={`${data?.name || "--"} - ${data?.companyName || "Openfolio"}`} 
                             />
-                            <span className="inline-block px-2">
-                                Share
-                            </span>
-                        </button>
+                        </CustomPopover>
                     </p>
                 </div>
                 <div >
