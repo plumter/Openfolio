@@ -2,7 +2,13 @@ import axios from "axios";
 import { QueryClient } from "react-query";
 
 // Create a client
-export const queryClient = new QueryClient()
+export const queryClient = new QueryClient({
+                                                defaultOptions: {
+                                                    queries: {
+                                                        retry: process.env.NODE_ENV === "test" ? false : 3,
+                                                    },
+                                                },
+                                            })
 
 const BASE_URL = process.env.REACT_APP_BASE_URL || "/v1";
 

@@ -97,7 +97,7 @@ const ProfileDetailsTab = ({data, token}) => {
                         />
                         <FormInput
                             label="Position:"
-                            placeholder="Enter Company Name" 
+                            placeholder="Enter Position in Company" 
                             name="position"
                             minLength="2"
                             defaultValue={data?.position}
@@ -117,6 +117,7 @@ const ProfileDetailsTab = ({data, token}) => {
                                 name="phone"
                                 validation={validation}
                                 defaultValue={data?.phone}
+                                key={`phone-${data?.phone}`}
                             />
                         </div>
                     </div>

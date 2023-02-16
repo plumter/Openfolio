@@ -1,9 +1,8 @@
-import { randomString } from "app/common/util/Helpers";
 import React from "react";
 
 const CustomRadio = ({name, onchange, children, value, required, checked, className, ...props}) => {
 
-    const id = randomString();
+    const id = `${name}-${value}`;
 
     return <label className="relative cursor-pointer">
                     <div className={`flex items-center mr-4 mb-2 ${className}`}>

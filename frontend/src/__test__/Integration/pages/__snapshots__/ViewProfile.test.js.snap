@@ -1,0 +1,508 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`View Profile Page Test Invalid Public Profile Page View 1`] = `
+<div
+  class="flex justify-center"
+  data-testid="current-page"
+>
+  <div
+    class="layout"
+  >
+    <div>
+      <div
+        class="p-5 -mt-10"
+      >
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton mb-5"
+            style="height: 300px;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
+          <span
+            class="react-loading-skeleton mb-5"
+            style="height: 80px;"
+          >
+            ‌
+          </span>
+          <br />
+          <span
+            class="react-loading-skeleton mb-5"
+            style="height: 80px;"
+          >
+            ‌
+          </span>
+          <br />
+          <span
+            class="react-loading-skeleton mb-5"
+            style="height: 80px;"
+          >
+            ‌
+          </span>
+          <br />
+          <span
+            class="react-loading-skeleton mb-5"
+            style="height: 80px;"
+          >
+            ‌
+          </span>
+          <br />
+          <span
+            class="react-loading-skeleton mb-5"
+            style="height: 80px;"
+          >
+            ‌
+          </span>
+          <br />
+        </span>
+      </div>
+      <footer
+        class="mt-auto pt-12"
+      >
+        <div
+          class="flex justify-center"
+        >
+          <p
+            class="font-medium pr-2 my-auto"
+          >
+            Powered By:
+          </p>
+          <a
+            href="https://plumter.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="P"
+              class="w-7"
+              src="/assets/media/logos/plumter-logo.png"
+            />
+          </a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`View Profile Page Test Profile Page Preview 1`] = `
+<div
+  class="flex justify-center"
+  data-testid="current-page"
+>
+  <div
+    class="layout"
+  >
+    <div>
+      <div>
+        <div
+          class="pb-14 text-center text-white bg-black-1 -mt-10"
+        >
+          <div
+            class="sm:text-left sm:px-8 pt-8 pb-10"
+          >
+            <a
+              class="inline-block btn-danger btn-md text-center"
+              href="/profile?token=v2.local.YFtzW3EBVnesd9DluHg99ZBOezgbSU25v6U2RKjs_jQxnmOS7QFyBQcjqFQtX4kQqX5fD3nJjIv7W97Pe_aSWYZmyxDm4NiC_N-q1S-VPR_0_BHnxtp34mI7Vy2cZW8AYQZjqLQj-pm5u9gSANY8mxKdG6-PuFsKEJKh2_wTZVdxetJ3z8ZDewG9sic7oxgeHoeLfqFKienJsvTM_fI4-j_EBekZDds1t9PN9mOVlldsJqX6YYJ9OE8aIrt2A5ocWKB5yMdRcFozUUBxmyHboMc.bnVsbA"
+            >
+              <span
+                class="inline-block px-2"
+              >
+                Close
+              </span>
+            </a>
+          </div>
+          <img
+            alt="A"
+            class="rounded-full my-auto flex-none w-28 h-28 2xl:w-32 2xl:h-32 mx-auto p-2 bg-dark"
+            src="/assets/media/image/avatar.png"
+          />
+          <h4
+            class=" text-xl font-semibold pt-2 pb-1"
+          >
+            Successtar
+          </h4>
+          <p>
+            CEO
+             
+            Plumter
+          </p>
+          <div
+            class="py-3.5"
+          >
+            <button
+              class="btn-white btn-md text-center"
+              type="button"
+            >
+              <span
+                class="inline-block px-2"
+              >
+                Share
+              </span>
+            </button>
+            <div
+              class="hidden  popover p-0 border-0 shadow text-sm false w-40"
+            >
+              <div
+                class="py-1.5 text-black-1 dark:text-white rounded-lg text-sm dark:bg-dark dark:border-dark-1 dark:border"
+              >
+                <a
+                  class="initial block py-3 pl-3 w-full cursor-pointer hover:bg-secondary-light dark:hover:bg-dark-1"
+                  href="https://twitter.com/share?url=http%3A%2F%2Flocalhost%2F63eb743cbf03b80915f4ad88&text=Successtar%20-%20Plumter"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Twitter
+                </a>
+                <a
+                  class="initial block py-3 pl-3 w-full cursor-pointer hover:bg-secondary-light dark:hover:bg-dark-1"
+                  href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%2F63eb743cbf03b80915f4ad88&quote=Successtar%20-%20Plumter&display=popup"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Facebook
+                </a>
+                <a
+                  class="initial block py-3 pl-3 w-full cursor-pointer hover:bg-secondary-light dark:hover:bg-dark-1"
+                  href="https://www.linkedin.com/shareArticle/?url=http%3A%2F%2Flocalhost%2F63eb743cbf03b80915f4ad88"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Linkedin
+                </a>
+                <a
+                  class="initial block py-3 pl-3 w-full cursor-pointer hover:bg-secondary-light dark:hover:bg-dark-1"
+                  rel="noreferrer"
+                  target="_self"
+                >
+                  Copy link
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="border-b text-grey-2 flex p-5 sm:px-8 sm:py-7 dark:border-dark"
+          >
+            <span
+              class="inline-block flex-none my-auto bg-black-1 dark:bg-white p-2.5 rounded-full"
+            />
+            <div
+              class="flex-1 pl-5 my-auto"
+            >
+              <h6
+                class="font-medium pb-0.5"
+              >
+                Website:
+              </h6>
+              <p
+                class="text-black-1 dark:text-white"
+              >
+                https://plumter.com/successtar
+              </p>
+            </div>
+          </div>
+          <div
+            class="border-b text-grey-2 flex p-5 sm:px-8 sm:py-7 dark:border-dark"
+          >
+            <span
+              class="inline-block flex-none my-auto bg-black-1 dark:bg-white p-2.5 rounded-full"
+            />
+            <div
+              class="flex-1 pl-5 my-auto"
+            >
+              <h6
+                class="font-medium pb-0.5"
+              >
+                Address:
+              </h6>
+              <p
+                class="text-black-1 dark:text-white"
+              >
+                Lekki
+              </p>
+            </div>
+          </div>
+          <div
+            class="border-b text-grey-2 flex p-5 sm:px-8 sm:py-7 dark:border-dark"
+          >
+            <span
+              class="inline-block flex-none my-auto bg-black-1 dark:bg-white p-2.5 rounded-full"
+            />
+            <div
+              class="flex-1 pl-5 my-auto"
+            >
+              <h6
+                class="font-medium pb-0.5"
+              >
+                Email:
+              </h6>
+              <p
+                class="text-black-1 dark:text-white"
+              >
+                hammed@plumter.com
+              </p>
+            </div>
+          </div>
+          <div
+            class="border-b text-grey-2 flex p-5 sm:px-8 sm:py-7 dark:border-dark"
+          >
+            <span
+              class="inline-block flex-none my-auto bg-black-1 dark:bg-white p-2.5 rounded-full"
+            />
+            <div
+              class="flex-1 pl-5 my-auto"
+            >
+              <h6
+                class="font-medium pb-0.5"
+              >
+                Phone Number:
+              </h6>
+              <p
+                class="text-black-1 dark:text-white"
+              >
+                +2347061855688
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer
+        class="mt-auto pt-12"
+      >
+        <div
+          class="flex justify-center"
+        >
+          <p
+            class="font-medium pr-2 my-auto"
+          >
+            Powered By:
+          </p>
+          <a
+            href="https://plumter.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="P"
+              class="w-7"
+              src="/assets/media/logos/plumter-logo.png"
+            />
+          </a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`View Profile Page Test Public Profile Page View 1`] = `
+<div
+  class="flex justify-center"
+  data-testid="current-page"
+>
+  <div
+    class="layout"
+  >
+    <div>
+      <div>
+        <div
+          class="pb-14 text-center text-white bg-black-1 -mt-10"
+        >
+          <div
+            class="sm:text-left sm:px-8 pt-8 pb-10"
+          />
+          <img
+            alt="A"
+            class="rounded-full my-auto flex-none w-28 h-28 2xl:w-32 2xl:h-32 mx-auto p-2 bg-dark"
+            src="/assets/media/image/avatar.png"
+          />
+          <h4
+            class=" text-xl font-semibold pt-2 pb-1"
+          >
+            Successtar
+          </h4>
+          <p>
+            CEO
+             
+            Plumter
+          </p>
+          <div
+            class="py-3.5"
+          >
+            <button
+              class="btn-white btn-md text-center"
+              type="button"
+            >
+              <span
+                class="inline-block px-2"
+              >
+                Share
+              </span>
+            </button>
+            <div
+              class="hidden  popover p-0 border-0 shadow text-sm false w-40"
+            >
+              <div
+                class="py-1.5 text-black-1 dark:text-white rounded-lg text-sm dark:bg-dark dark:border-dark-1 dark:border"
+              >
+                <a
+                  class="initial block py-3 pl-3 w-full cursor-pointer hover:bg-secondary-light dark:hover:bg-dark-1"
+                  href="https://twitter.com/share?url=http%3A%2F%2Flocalhost%2F63eb743cbf03b80915f4ad88&text=Successtar%20-%20Plumter"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Twitter
+                </a>
+                <a
+                  class="initial block py-3 pl-3 w-full cursor-pointer hover:bg-secondary-light dark:hover:bg-dark-1"
+                  href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%2F63eb743cbf03b80915f4ad88&quote=Successtar%20-%20Plumter&display=popup"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Facebook
+                </a>
+                <a
+                  class="initial block py-3 pl-3 w-full cursor-pointer hover:bg-secondary-light dark:hover:bg-dark-1"
+                  href="https://www.linkedin.com/shareArticle/?url=http%3A%2F%2Flocalhost%2F63eb743cbf03b80915f4ad88"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Linkedin
+                </a>
+                <a
+                  class="initial block py-3 pl-3 w-full cursor-pointer hover:bg-secondary-light dark:hover:bg-dark-1"
+                  rel="noreferrer"
+                  target="_self"
+                >
+                  Copy link
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="border-b text-grey-2 flex p-5 sm:px-8 sm:py-7 dark:border-dark"
+          >
+            <span
+              class="inline-block flex-none my-auto bg-black-1 dark:bg-white p-2.5 rounded-full"
+            />
+            <div
+              class="flex-1 pl-5 my-auto"
+            >
+              <h6
+                class="font-medium pb-0.5"
+              >
+                Website:
+              </h6>
+              <p
+                class="text-black-1 dark:text-white"
+              >
+                https://plumter.com/successtar
+              </p>
+            </div>
+          </div>
+          <div
+            class="border-b text-grey-2 flex p-5 sm:px-8 sm:py-7 dark:border-dark"
+          >
+            <span
+              class="inline-block flex-none my-auto bg-black-1 dark:bg-white p-2.5 rounded-full"
+            />
+            <div
+              class="flex-1 pl-5 my-auto"
+            >
+              <h6
+                class="font-medium pb-0.5"
+              >
+                Address:
+              </h6>
+              <p
+                class="text-black-1 dark:text-white"
+              >
+                Lekki
+              </p>
+            </div>
+          </div>
+          <div
+            class="border-b text-grey-2 flex p-5 sm:px-8 sm:py-7 dark:border-dark"
+          >
+            <span
+              class="inline-block flex-none my-auto bg-black-1 dark:bg-white p-2.5 rounded-full"
+            />
+            <div
+              class="flex-1 pl-5 my-auto"
+            >
+              <h6
+                class="font-medium pb-0.5"
+              >
+                Email:
+              </h6>
+              <p
+                class="text-black-1 dark:text-white"
+              >
+                hammed@plumter.com
+              </p>
+            </div>
+          </div>
+          <div
+            class="border-b text-grey-2 flex p-5 sm:px-8 sm:py-7 dark:border-dark"
+          >
+            <span
+              class="inline-block flex-none my-auto bg-black-1 dark:bg-white p-2.5 rounded-full"
+            />
+            <div
+              class="flex-1 pl-5 my-auto"
+            >
+              <h6
+                class="font-medium pb-0.5"
+              >
+                Phone Number:
+              </h6>
+              <p
+                class="text-black-1 dark:text-white"
+              >
+                +2347061855688
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer
+        class="mt-auto pt-12"
+      >
+        <div
+          class="flex justify-center"
+        >
+          <p
+            class="font-medium pr-2 my-auto"
+          >
+            Powered By:
+          </p>
+          <a
+            href="https://plumter.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="P"
+              class="w-7"
+              src="/assets/media/logos/plumter-logo.png"
+            />
+          </a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+`;

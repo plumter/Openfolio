@@ -84,7 +84,7 @@ const ViewProfile = _ => {
                     <p>
                         {data?.position} {data?.companyName}
                     </p>
-                    <p className="py-3.5">
+                    <div className="py-3.5">
                         <CustomPopover
                             placement="bottom-start"
                             offset={[0, 8]}
@@ -107,7 +107,7 @@ const ViewProfile = _ => {
                                 title={`${data?.name || "--"} - ${data?.companyName || "Openfolio"}`} 
                             />
                         </CustomPopover>
-                    </p>
+                    </div>
                 </div>
                 <div >
                     {
